@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+rm -rf $HOME/.config/nvim
+ln -s "$(realpath "$(dirname "${BASH_SOURCE[0]}")")/nvim" $HOME/.config/nvim
