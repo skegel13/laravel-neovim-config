@@ -1,5 +1,6 @@
 return {
   {
+    -- Set Laravel Pint as the default PHP formatter with PHP CS Fixer as a fall back.
     "stevearc/conform.nvim",
     optional = true,
     opts = {
@@ -9,6 +10,7 @@ return {
     },
   },
   {
+    -- Remove phpcs linter.
     "mfussenegger/nvim-lint",
     optional = true,
     opts = {
@@ -18,11 +20,15 @@ return {
     },
   },
   {
+    -- Add neotest-pest plugin for running PHP tests.
+    -- A package is also available for PHPUnit if needed.
     "nvim-neotest/neotest",
     dependencies = { "V13Axel/neotest-pest" },
     opts = { adapters = { "neotest-pest" } },
   },
   {
+    -- Add the Laravel.nvim plugin which gives the ability to run Artisan commands
+    -- from Neovim.
     "adalessa/laravel.nvim",
     dependencies = {
       "nvim-telescope/telescope.nvim",
@@ -43,6 +49,8 @@ return {
     },
   },
   {
+    -- Add the blade-nav.nvim plugin which provides Goto File capabilities
+    -- for Blade files.
     "ricardoramirezr/blade-nav.nvim",
     dependencies = {
       "hrsh7th/nvim-cmp",
@@ -50,6 +58,7 @@ return {
     ft = { "blade", "php" }, -- optional, improves startup time
   },
   {
+    -- Add a Treesitter parser for Laravel Blade to provide Blade syntax highlighting.
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
