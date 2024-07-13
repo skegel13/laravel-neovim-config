@@ -1,6 +1,7 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.lang.php"
+    "lazyvim.plugins.extras.lang.php",
+    "lazyvim.plugins.extras.test.core"
   ],
   "news": {
     "NEWS.md": "6077"
