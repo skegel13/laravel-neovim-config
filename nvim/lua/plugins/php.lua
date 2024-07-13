@@ -42,4 +42,11 @@ return {
       features = { null_ls = { enable = false } },
     },
   },
+  {
+    "ricardoramirezr/blade-nav.nvim",
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+    },
+    ft = { "blade", "php" }, -- optional, improves startup time
+  },
 }
